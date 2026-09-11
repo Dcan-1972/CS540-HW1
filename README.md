@@ -53,6 +53,16 @@ jupyter notebook
 
 Then open the homework notebook file in the repository root.
 
+## Reproduce the Results
+
+To run the notebook from start to finish without opening Jupyter manually:
+
+```bash
+jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=1200 --output executed_hw1.ipynb *.ipynb
+```
+
+This command executes the notebook and writes an executed copy named `executed_hw1.ipynb`.
+
 ## Data Notes
 
 The notebook uses `yfinance` to download historical market data. Results may vary slightly over time if Yahoo Finance updates or adjusts its historical price data.
@@ -72,3 +82,7 @@ The project uses:
 ## Repository Status
 
 This repository is organized as a coursework submission. The notebook contains the implementation, charts, and written discussion for the homework problems.
+
+## Verification
+
+The notebook was tested with `jupyter nbconvert --execute` to confirm it runs from a clean top-to-bottom execution.
